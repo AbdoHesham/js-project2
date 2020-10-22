@@ -18,7 +18,6 @@ function saveToLocal(e) {
       localStorage.setItem("password", passWord);
       // Retrieve
       document.getElementById("result").innerHTML = localStorage.getItem("email", "password");
-      console.log(localStorage);
       allertSuc();
       close();
 
@@ -39,11 +38,10 @@ var imgLogo=document.querySelector("#imgLogo");
 function openModal() {
   console.log(localStorage );
   setTimeout(function () {
-    if (typeof (Storage) !== "undefined") {
+    if (!localStorage.getItem("email","password")) {
       nav.style.display="none";
       side.style.display="none";
       imgLogo.style.display="none";
-
       modal.style.display = "block";
       
     } else {
