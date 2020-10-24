@@ -15,7 +15,39 @@
     <link href="assets/css/Site.css" rel="stylesheet" />
 </head>
 
+
 <body data-spy="scroll" data-target=".navbar" data-offset="200" style="overflow-x:hidden">
+    <style>
+        .error {
+    color: #990000;
+}
+form{
+  width: 400px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+input[type=text],input[type=email],input[type=tel],input[type=submit] select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+    </style>
     <div class="culmn">
         <header id="main_menu" class="header navbar-fixed-top">
             <div class="main_menu_bg">
@@ -82,7 +114,7 @@
                                         </p>
 
                                         <h1 class="grandColor" style="font-weight:bold">
-                                            Our people are our greatest assets.&lt;br&gt;
+                                            Our people are our greatest assets.
                                         </h1>
                                     </div>
                                 </div>
@@ -98,6 +130,58 @@
                 <path d="M0 5 H5 C25 5 25 20 45 20 S65 5 85 5 H90 V-5 H0z" fill="#ffffff" stroke="transparent" />
             </svg>
         </div>
+
+       <section class="form">
+        <form id="contact" name="contact" onsubmit="return validateFormOnSubmit(this)" action="" method="post">
+            <div class="center">
+                <label>First Name</label>
+                <input placeholder="First Name" type="text" name="name" id="name" tabindex="1" autofocus />
+                <div id="name-error" class="error"></div>
+            </div>
+            <div>
+                <label>last name</label>
+                <input placeholder="last name" type="text" name="lastname" id="lastname" tabindex="2" autofocus />        <div id="lastname-error" class="error"></div>
+        
+            </div>
+            <div>
+                <label>Email</label>
+                <input placeholder="Email" type="email" name="email" id="email" tabindex="3" autofocus />
+                <div id="email-error" class="error"></div>
+            </div>
+            <div>
+                <label>Phone</label>
+                <input placeholder="Phone" type="tel" name="phone" id="phone" tabindex="4" autofocus />
+                <div id="phone-error" class="error"></div>
+            </div>
+            <div>
+                <label>gender</label>
+                <input type="radio" name="gender" id="male" tabindex="5" autofocus />male
+                <input type="radio" name="gender" id="female" tabindex="6" autofocus />female
+           
+                <div id="pet-error" class="error"></div>
+            </div>
+            <div>
+                <label>You age between 18 and 60</label>
+                <input placeholder="Your age between 1 and 50" type="text" name="number" id="number" tabindex="8" autofocus />
+                <div id="number-error" class="error"></div>
+            </div>
+            <div>
+         
+          <div>
+                <select name="country" class="form-control">
+          <option selected="" value="Default">(Please select a country)</option>
+          <option value="AF">Australia</option>
+          <option value="AL">Canada</option>
+          <option value="DZ">India</option>
+          <option value="AS">Russia</option>
+          <option value="AD">USA</option>
+          </select>
+          </div>
+            <div>
+                <button type="submit" class="btn btn-info btn-block " name="submit" id="submit" tabindex="10">Send</button>
+            </div>
+        </form>
+       </section>
 
         <section id="footer" class="footer_widget">
             <div class="video_overlay">

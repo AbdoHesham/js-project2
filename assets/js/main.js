@@ -1,3 +1,5 @@
+
+
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
 }
@@ -6,7 +8,8 @@ function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
 openModal();
-
+//localStorage.clear();
+// save to localStorage
 function saveToLocal(e) {
   var email = document.getElementById("email").value;
   var passWord = document.getElementById("password").value;
@@ -25,18 +28,23 @@ function saveToLocal(e) {
       allertErr();
     }
 
-  } else {
+  }
+  else {
     allertErr();
   }
   e.preventDefault();
 }
+
 var modal = document.getElementById("myModal");
 var nav = document.querySelector(".nav");
 var side = document.querySelector("#side");
 var imgLogo = document.querySelector("#imgLogo");
 
+
+// open modal 
 function openModal() {
   console.log(localStorage);
+ 
   setTimeout(function () {
     if (!localStorage.getItem("email", "password")) {
       nav.style.display = "none";
@@ -44,13 +52,11 @@ function openModal() {
       imgLogo.style.display = "none";
       modal.style.display = "block";
 
-    } else {
-
-      console.log(localStorage);
-    }
+    } else {}
   }, 3000);
 
 }
+// close modal
 
 function close() {
   nav.style.display = "block";
@@ -86,6 +92,7 @@ var imgs = ["https://images.pexels.com/photos/1432066/pexels-photo-1432066.jpeg?
   "https://images.pexels.com/photos/1188849/pexels-photo-1188849.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
 ];
 
+
 document.onkeydown = function (event) {
   var e = event || window.event;
   if (e.keyCode == '37') { //LEFT
@@ -99,3 +106,4 @@ function changeImage(dir) {
   var img = document.getElementById("imgClickAndChange");
   img.src = imgs[imgs.indexOf(img.src) + dir] || imgs[(dir == 1) ? 0 : imgs.length - 1];
 }
+/////////////////////////////// slider/////////////////////////////////////////
