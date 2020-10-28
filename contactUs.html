@@ -19,34 +19,38 @@
 <body data-spy="scroll" data-target=".navbar" data-offset="200" style="overflow-x:hidden">
     <style>
         .error {
-    color: #990000;
-}
-form{
-  width: 400px;
-  margin: auto;
-  margin-bottom: 50px;
-}
-input[type=text],input[type=email],input[type=tel],input[type=submit] select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-input[type=submit] {
-  width: 100%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
+            color: #990000;
+        }
+        
+        form {
+            width: 400px;
+            margin: auto;
+            margin-bottom: 50px;
+        }
+        
+        input[type=text],
+        input[type=email],
+        input[type=tel],
+        input[type=submit] select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        input[type=submit] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
     </style>
     <div class="culmn">
         <header id="main_menu" class="header navbar-fixed-top">
@@ -59,16 +63,12 @@ input[type=submit] {
                                     <!-- Brand and toggle get grouped for better mobile display -->
                                     <a class="navbar-brand" id="imgLogo" href="index.html">
                                         <div class="col-md-4 col-sm-4 col-4">
-                                            <img class="imgLogo"
-                                                style="padding-right:1px !important;width:100%;height:50px"
-                                                src="assets/img/logo.png" />
+                                            <img class="imgLogo" style="padding-right:1px !important;width:100%;height:50px" src="assets/img/logo.png" />
                                         </div>
-                                        <div class="col-md-8 col-sm-8 col-xs-8 pull-left hidden-sm hidden-xs"
-                                            style="padding-left:1px !important">
+                                        <div class="col-md-8 col-sm-8 col-xs-8 pull-left hidden-sm hidden-xs" style="padding-left:1px !important">
                                             <span class="hidden-sm hidden-xs" style="color:white"></span>
                                             <br />
-                                            <small class="hidden-sm hidden-xs"
-                                                style="color:rgba(255, 255, 255, 0.55);font-size:14px"></small>
+                                            <small class="hidden-sm hidden-xs" style="color:rgba(255, 255, 255, 0.55);font-size:14px"></small>
                                         </div>
                                     </a>
                                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -93,16 +93,15 @@ input[type=submit] {
                                 </div>
                                 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
                             </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </header>
         <!--End of header -->
 
 
-        <section id="home" class="home"
-            style="background: url(assets/img/12%403x.png) no-repeat 100% 100%;background-size:cover">
+        <section id="home" class="home" style="background: url(assets/img/12%403x.png) no-repeat 100% 100%;background-size:cover">
             <div class="overlay">
                 <div class="container">
                     <div class="row">
@@ -125,63 +124,78 @@ input[type=submit] {
             </div>
         </section>
         <div style="margin-top:-100px;transform:rotate(180deg)">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" height="100" width="100%" viewBox="0 0 90 20"
-                preserveAspectRatio="none">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" height="100" width="100%" viewBox="0 0 90 20" preserveAspectRatio="none">
                 <path d="M0 5 H5 C25 5 25 20 45 20 S65 5 85 5 H90 V-5 H0z" fill="#ffffff" stroke="transparent" />
             </svg>
         </div>
 
-       <section class="form">
-        <form id="contact" name="contact" onsubmit="return validateFormOnSubmit(this)" action="" method="post">
-            <div class="center">
-                <label>First Name</label>
-                <input placeholder="First Name" type="text" name="name" id="name" tabindex="1" autofocus />
-                <div id="name-error" class="error"></div>
-            </div>
-            <div>
-                <label>last name</label>
-                <input placeholder="last name" type="text" name="lastname" id="lastname" tabindex="2" autofocus />        <div id="lastname-error" class="error"></div>
-        
-            </div>
-            <div>
-                <label>Email</label>
-                <input placeholder="Email" type="email" name="email" id="email" tabindex="3" autofocus />
-                <div id="email-error" class="error"></div>
-            </div>
-            <div>
-                <label>Phone</label>
-                <input placeholder="Phone" type="tel" name="phone" id="phone" tabindex="4" autofocus />
-                <div id="phone-error" class="error"></div>
-            </div>
-            <div>
-                <label>gender</label>
-                <input type="radio" name="gender" id="male" tabindex="5" autofocus />male
-                <input type="radio" name="gender" id="female" tabindex="6" autofocus />female
-           
-                <div id="pet-error" class="error"></div>
-            </div>
-            <div>
-                <label>You age between 18 and 60</label>
-                <input placeholder="Your age between 1 and 50" type="text" name="number" id="number" tabindex="8" autofocus />
-                <div id="number-error" class="error"></div>
-            </div>
-            <div>
-         
-          <div>
-                <select name="country" class="form-control">
-          <option selected="" value="Default">(Please select a country)</option>
-          <option value="AF">Australia</option>
-          <option value="AL">Canada</option>
-          <option value="DZ">India</option>
-          <option value="AS">Russia</option>
-          <option value="AD">USA</option>
-          </select>
-          </div>
-            <div>
-                <button type="submit" class="btn btn-info btn-block " name="submit" id="submit" tabindex="10">Send</button>
-            </div>
+
+        <form class="validation_form" action="#" name="StudentRegistration" onsubmit="return(validate());">
+
+            <table>
+
+                <tr>
+                    <td>
+                        <center>
+                            <font size=5><b> Registration Form</b></font>
+                        </center>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Name</td>
+                    <td><input type=text name=textnames id="textname" size="30"></td>
+                </tr>
+
+                <tr>
+                    <td>Father Name</td>
+                    <td><input type="text" name="fathername" id="fathername" size="30"></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" id="email" name="email" size="30" required=""></td>
+                </tr>
+                <tr>
+                    <td>Postal Address</td>
+                    <td><input type="text" name="paddress" id="paddress" size="30"></td>
+                </tr>
+
+                <tr>
+                    <td>Personal Address</td>
+                    <td><input type="text" name="personaladdress" id="personaladdress" size="30"></td>
+                </tr>
+
+                <tr>
+                    <td>Gender</td>
+                    <td><input type="radio" name="sex" value="male" size="10">Male
+                        <input type="radio" name="sex" value="Female" size="10">Female</td>
+                </tr>
+
+                <tr>
+                    <td>country</td>
+                    <td><select name="City">
+            <option value="-1" selected>select..</option>
+            <option value="New Delhi">Egyot</option>
+            <option value="Mumbai">USA</option>
+            <option value="Goa">KSA</option>
+            <option value="Patna">UAE</option>
+            </select></td>
+                </tr>
+                <tr>
+                    <td>EmailId</td>
+                    <td><input type="text" name="emailid" id="emailid" size="30"></td>
+                </tr>
+                <tr>
+                    <td>MobileNo</td>
+                    <td><input type="text" name="mobileno" id="mobileno" size="30"></td>
+                </tr>
+                <tr>
+                    <td><input type="reset"></td>
+                    <td colspan="2"><input type="submit" value="Submit Form" /></td>
+                </tr>
+            </table>
         </form>
-       </section>
+
 
         <section id="footer" class="footer_widget">
             <div class="video_overlay">
@@ -198,7 +212,7 @@ input[type=submit] {
                                                     <div class="separator"></div>
                                                 </div>
                                                 <p>
-                                                <div>we present free online courses in programming.</div>
+                                                    <div>we present free online courses in programming.</div>
                                                 </p>
                                             </div>
                                         </div>
@@ -256,12 +270,12 @@ input[type=submit] {
                 </div>
             </div>
         </section>
-    </div>
-    <!-- START SCROLL TO TOP  -->
-    <div class="scrollup">
-        <a href="#"><i class="fa fa-chevron-up"></i></a>
-    </div>
-    <script src="assets/js/script.js"></script>
+        </div>
+        <!-- START SCROLL TO TOP  -->
+        <div class="scrollup">
+            <a href="#"><i class="fa fa-chevron-up"></i></a>
+        </div>
+        <script src="assets/js/script.js"></script>
 
 </body>
 
